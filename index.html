@@ -19,7 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="Assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <link rel="preload" as="image" href="Assets/img/hero.webp">
 
 </head>
 
@@ -30,15 +32,11 @@
 <!-- HEADER -->
 <!-- ===================================== -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
 <header class="pv-header" role="banner">
   <div class="pv-header__capsule">
     <a class="pv-header__brand" href="#top" aria-label="Retour en haut">
       <!-- Remplace par ton logo -->
-      <img src="Assets/img/provitro-logo.svg" alt="Provitro" class="pv-header__logo">
+      <img src="assets/img/provitro-logo.svg" alt="Provitro" class="pv-header__logo">
     </a>
 
     <nav class="pv-header__nav" aria-label="Menu principal">
@@ -93,7 +91,14 @@
 
 <section id="top" class="pv-hero">
   <div class="pv-hero__bg">
-    <img src="Assets/img/hero.jpeg" alt="" class="pv-hero__image">
+    <img 
+      src="Assets/img/hero.webp" 
+      alt="" 
+      class="pv-hero__image"
+      width="1600"
+      height="900"
+      fetchpriority="high"
+    >
   </div>
 
   <div class="pv-hero__overlay"></div>
@@ -147,14 +152,30 @@
     <div class="pv-founders__grid">
       <article class="pv-founder-card">
         <div class="pv-founder-card__media">
-          <img src="Assets/img/cedric.webp" alt="Cédric de Provitro" class="pv-founder-card__image">
+          <img 
+            src="Assets/img/cedric.webp" 
+            alt="Cédric de Provitro" 
+            class="pv-founder-card__image"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
           <div class="pv-founder-card__overlay"></div>
         </div>
       </article>
 
       <article class="pv-founder-card">
         <div class="pv-founder-card__media">
-          <img src="Assets/img/Ludovic.jpeg" alt="Ludovic de Provitro" class="pv-founder-card__image">
+          <img 
+            src="Assets/img/Ludovic.webp" 
+            alt="Ludovic de Provitro" 
+            class="pv-founder-card__image"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
           <div class="pv-founder-card__overlay"></div>
         </div>
       </article>
@@ -187,7 +208,7 @@
         
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/Claudiabedard.png" alt="Photo de profil de Carole">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/Claudiabedard.png" alt="Photo de profil de Carole">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">claudia bedard</div>
@@ -200,7 +221,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/Lilianepeland.png" alt="Photo de profil de Pierre">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/Lilianepeland.png" alt="Photo de profil de Pierre">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Liliane Pelland</div>
@@ -213,7 +234,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/Léa Pascal.png" alt="Photo de profil de Alexandre">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/Léa Pascal.png" alt="Photo de profil de Alexandre">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Léa Pascal</div>
@@ -226,7 +247,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/Nathaly Martel .png" alt="Photo de profil de Eve">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/Nathaly Martel .png" alt="Photo de profil de Eve">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Nathaly Martel</div>
@@ -239,7 +260,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/ Catherine Monnet.png" alt="Photo de profil de Famille Labrie">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/ Catherine Monnet.png" alt="Photo de profil de Famille Labrie">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Catherine Monnet</div>
@@ -254,7 +275,7 @@
         <div class="pv-reviews-marquee__clones" aria-hidden="true">
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/josee st-cyr.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/josee st-cyr.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">josee st-cyr</div>
@@ -267,7 +288,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/ Fanny Girardin.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/ Fanny Girardin.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Fanny Girardin</div>
@@ -280,7 +301,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/ Marc-André Dubois.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/ Marc-André Dubois.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Marc-André Dubois</div>
@@ -293,7 +314,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/unnamed.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/unnamed.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">LB</div>
@@ -306,7 +327,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/Danielle Souliere.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/Danielle Souliere.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Danielle Souliere</div>
@@ -327,7 +348,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/Chocolats Favoris St-Hubert.png" alt="Photo de profil de Tony">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/Chocolats Favoris St-Hubert.png" alt="Photo de profil de Tony">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Chocolats Favoris St-Hubert</div>
@@ -340,7 +361,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/murielle renaud.png" alt="Photo de profil de Marie">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/murielle renaud.png" alt="Photo de profil de Marie">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">murielle renaud</div>
@@ -353,7 +374,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/carole sarrazin.png" alt="Photo de profil de Julie">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/carole sarrazin.png" alt="Photo de profil de Julie">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">carole sarrazin</div>
@@ -367,7 +388,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/ Josee Gaudreault.png" alt="Photo de profil de Benoît">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/ Josee Gaudreault.png" alt="Photo de profil de Benoît">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Josee Gaudreault</div>
@@ -380,7 +401,7 @@
 
         <article class="pv-review-card">
           <div class="pv-review-card__top">
-            <img class="pv-review-card__avatar" src="Assets/img/reviews/ Corinne Picard.png" alt="Photo de profil de Chantal">
+            <img class="pv-review-card__avatar" src="assets/img/reviews/ Corinne Picard.png" alt="Photo de profil de Chantal">
             <div class="pv-review-card__meta">
               <div class="pv-review-card__stars">★★★★★</div>
               <div class="pv-review-card__name">Corinne Picard</div>
@@ -394,7 +415,7 @@
         <div class="pv-reviews-marquee__clones" aria-hidden="true">
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/François doyon .png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/François doyon .png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">François doyon</div>
@@ -410,7 +431,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/Daniel Tanguay.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/Daniel Tanguay.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Daniel Tanguay</div>
@@ -423,7 +444,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/Genevieve Charest.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/Genevieve Charest.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Genevieve Charest</div>
@@ -438,7 +459,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/Julie Brouillette.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/Julie Brouillette.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">Julie Brouillette</div>
@@ -452,7 +473,7 @@
 
           <article class="pv-review-card">
             <div class="pv-review-card__top">
-              <img class="pv-review-card__avatar" src="Assets/img/reviews/botty csillag.png" alt="">
+              <img class="pv-review-card__avatar" src="assets/img/reviews/botty csillag.png" alt="">
               <div class="pv-review-card__meta">
                 <div class="pv-review-card__stars">★★★★★</div>
                 <div class="pv-review-card__name">botty csillag</div>
@@ -531,7 +552,7 @@
 
             <!-- IMAGE -->
             <img class="pv-social-card__img"
-                src="Assets/img/video/osmose.PNG"
+                src="assets/img/video/osmose-inverse.webp"
                 alt="Vidéo osmose inverse">
 
             <!-- OVERLAY -->
@@ -546,7 +567,7 @@
 
             <!-- VIDEO (cachée au départ) -->
             <video class="pv-social-card__video" playsinline>
-              <source src="Assets/img/video/osmose.mp4" type="video/mp4">
+              <source src="assets/img/video/osmose.mp4" type="video/mp4">
             </video>
 
           </div>
@@ -557,7 +578,7 @@
 
             <!-- IMAGE -->
             <img class="pv-social-card__img"
-                src="Assets/img/video/materiel.PNG"
+                src="assets/img/video/materiel.webp"
                 alt="Vidéo osmose inverse">
 
             <!-- OVERLAY -->
@@ -572,7 +593,7 @@
 
             <!-- VIDEO (cachée au départ) -->
             <video class="pv-social-card__video" playsinline>
-              <source src="Assets/img/video/materiel.mp4" type="video/mp4">
+              <source src="assets/img/video/materiel.mp4" type="video/mp4">
             </video>
 
           </div>
@@ -584,7 +605,7 @@
 
             <!-- IMAGE -->
             <img class="pv-social-card__img"
-                src="Assets/img/video/nettoyage.PNG"
+                src="assets/img/video/nettoyage.webp"
                 alt="Vidéo osmose inverse">
 
             <!-- OVERLAY -->
@@ -599,7 +620,7 @@
 
             <!-- VIDEO (cachée au départ) -->
             <video class="pv-social-card__video" playsinline>
-              <source src="Assets/img/video/nettoyage.mp4" type="video/mp4">
+              <source src="assets/img/video/nettoyage.mp4" type="video/mp4">
             </video>
 
           </div>
@@ -683,9 +704,9 @@
         <div id="a5a6ba0d-dc11-4e95-ba69-62fb7e8ec538-2278042"></div>
       </div>
 
-      <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/Assets/external/work_request_embed.css" media="screen" />
+      <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
       <script 
-        src="https://d3ey4dbjkt2f6s.cloudfront.net/Assets/static_link/work_request_embed_snippet.js"
+        src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js"
         clienthub_id="a5a6ba0d-dc11-4e95-ba69-62fb7e8ec538-2278042"
         form_url="https://clienthub.getjobber.com/client_hubs/a5a6ba0d-dc11-4e95-ba69-62fb7e8ec538/public/work_request/embedded_work_request_form?form_id=2278042">
       </script>
@@ -701,7 +722,15 @@
           </div>
 
           <div class="pv-contact__map-wrap">
-            <img src="Assets/img/carte.webp" alt="Zone desservie sur la Rive-Sud de Montréal" class="pv-contact__map">
+            <img 
+              src="Assets/img/carte.webp" 
+              alt="Zone desservie sur la Rive-Sud de Montréal" 
+              class="pv-contact__map"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
 
           <div class="pv-contact__service-area">
@@ -721,7 +750,7 @@
 
 <section class="pv-cta-banner">
   <div class="pv-cta-banner__bg">
-    <img src="Assets/img/bg_text.jpeg" alt="" class="pv-cta-banner__img">
+    <img src="assets/img/bg_text.webp" alt="" class="pv-cta-banner__img">
   </div>
 
   <div class="pv-cta-banner__overlay"></div>
@@ -746,7 +775,7 @@
 
     <div class="pv-footer__grid">
       <div class="pv-footer__brand">
-        <img src="Assets/img/logo-footer.svg" alt="Provitro" class="pv-footer__logo">
+        <img src="assets/img/logo-footer.svg" alt="Provitro" class="pv-footer__logo">
         <p class="pv-footer__brand-text">
           Lavage de vitres professionnel sur la Rive-Sud de Montréal.
         </p>
@@ -800,7 +829,7 @@
 <!-- JS -->
 <!-- ===================================== -->
 
-<script src="Assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 
 
 
