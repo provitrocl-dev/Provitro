@@ -21,11 +21,14 @@ if (socialTrack && socialPrev && socialNext && window.innerWidth > 980) {
 }
 
 document.querySelectorAll('.pv-social-card__video-wrap').forEach((wrap) => {
-  wrap.addEventListener('click', () => {
+  wrap.addEventListener('click', (e) => {
     const card = wrap.closest('.pv-social-card');
     const video = wrap.querySelector('.pv-social-card__video');
 
     if (!card || !video) return;
+
+    // Si on clique sur la vidéo ou ses contrôles, ne rien faire
+    if (e.target === video) return;
 
     document.querySelectorAll('.pv-social-card.active').forEach((otherCard) => {
       if (otherCard !== card) {
