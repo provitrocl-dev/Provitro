@@ -171,8 +171,7 @@ popupForm?.addEventListener('submit', async (e) => {
   }
 });
 
-/* TODO: Google Autocomplete - réactiver quand clé fonctionnelle
-function initAutocomplete() {
+/* TODO: Google Autocomplete - réactiver quand clé fonctionnelle*/
 
 function initAutocomplete() {
   const input = document.getElementById('pp-city');
@@ -182,5 +181,3 @@ function initAutocomplete() {
     componentRestrictions: { country: 'ca' },
   });
 }
-
-*/
