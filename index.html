@@ -23,6 +23,11 @@
 
   <link rel="preload" as="image" href="assets/img/hero.webp">
 
+  <!-- TODO: Google Autocomplete - réactiver quand clé fonctionnelle
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD7K855gh7N5z856-P5kBS6MSOisaMzrk&libraries=places&callback=initAutocomplete" async defer></script>
+-->
+
 </head>
 
 
@@ -52,7 +57,7 @@
 
     <div class="pv-header__actions">
       <a class="pv-header__call" href="tel:5149741773">Appelez</a>
-      <a class="pv-header__cta" href="https://quoti.ai/booking/h2o">Soumission</a>
+      <a class="pv-header__cta pv-popup-trigger" href="#">Soumission</a>
     </div>
 
     <details class="pv-header__drawer">
@@ -68,7 +73,7 @@
             Appelez
           </a>
 
-          <a class="pv-header__drawer-btn pv-header__drawer-btn--quote" href="https://quoti.ai/booking/h2o">
+          <a class="pv-header__drawer-btn pv-header__drawer-btn--quote pv-popup-trigger" href="#">
             Soumission
           </a>
 
@@ -133,7 +138,7 @@
         Lavage de vitres résidentiel sur la Rive-Sud. Résultat impeccable garanti.
       </p>
 
-      <a href="https://quoti.ai/booking/h2o" class="pv-btn pv-btn-primary">
+      <a href="#" class="pv-btn pv-btn-primary pv-popup-trigger">
         Obtenir une soumission
       </a>
 
@@ -182,7 +187,7 @@
     </div>
 
     <div class="pv-packages__cta-wrap">
-      <a href="https://quoti.ai/booking/h2o" class="pv-packages__cta">Obtenir mon prix</a>
+      <a href="#" class="pv-packages__cta pv-popup-trigger">Obtenir mon prix</a>
     </div>
   </div>
 
@@ -526,7 +531,7 @@
     </div>
 
     <div class="pv-packages__cta-wrap">
-      <a href="https://quoti.ai/booking/h2o" class="pv-packages__cta">Obtenir mon prix</a>
+      <a href="#" class="pv-popup-trigger" class="pv-packages__cta">Obtenir mon prix</a>
     </div>
   </div>
 </section>
@@ -761,10 +766,12 @@
       <p class="pv-cta-banner__subtitle">
         Service professionnel, rapide et impeccable sur la Rive-Sud.
       </p>
-      <a href="https://quoti.ai/booking/h2o" class="pv-cta-banner__btn">Obtenir mon prix</a>
+      <a href="#" class="pv-cta-banner__btn pv-popup-trigger">Obtenir mon prix</a>
     </div>
   </div>
 </section>
+
+
 
 <!-- ===================================== -->
 <!-- FOOTER -->
@@ -820,11 +827,75 @@
     <div class="pv-footer__bottom">
       <div class="pv-footer__line"></div>
       <p class="pv-footer__copyright">© 2026 Provitro. Tous droits réservés.</p>
-      <a href="privacy.html" style="color:rgba(255,255,255,0.66); text-decoration:none;">Politique de confidentialité</a>
     </div>
 
   </div>
 </footer>
+
+
+<!-- ===================================== -->
+<!-- POPUP SOUMISSION -->
+<!-- ===================================== -->
+
+<div class="pv-popup" id="pvPopup" role="dialog" aria-modal="true" aria-label="Obtenir une soumission" hidden>
+  <div class="pv-popup__backdrop"></div>
+
+  <div class="pv-popup__panel">
+    <button class="pv-popup__close" aria-label="Fermer" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <p class="pv-popup__eyebrow">Service rapide & professionnel</p>
+    <h2 class="pv-popup__title">Obtenir une soumission</h2>
+    <p class="pv-popup__lead">Laissez-nous vos coordonnées, on vous rappelle sous 24h avec votre prix.</p>
+
+    <form class="pv-popup__form" id="pvPopupForm" novalidate>
+      <div class="pv-popup__fields">
+
+        <div class="pv-popup__field">
+          <label for="pp-name" class="pv-popup__label">Prénom *</label>
+          <input id="pp-name" name="firstName" type="text" class="pv-popup__input" placeholder="Votre prénom" required autocomplete="given-name">
+        </div>
+
+        <div class="pv-popup__field">
+          <label for="pp-phone" class="pv-popup__label">Téléphone *</label>
+          <input id="pp-phone" name="phone" type="tel" class="pv-popup__input" placeholder="(514) 000-0000" required autocomplete="tel">
+        </div>
+
+        <div class="pv-popup__field">
+          <label for="pp-email" class="pv-popup__label">Courriel</label>
+          <input id="pp-email" name="email" type="email" class="pv-popup__input" placeholder="vous@exemple.com" autocomplete="email">
+        </div>
+
+        <div class="pv-popup__field">
+          <label for="pp-city" class="pv-popup__label">Adresse postale</label>
+          <input id="pp-city" name="address" type="text" class="pv-popup__input" placeholder="123 Rue des Érables, Saint-Bruno" autocomplete="address-level2">
+        </div>
+
+      </div>
+
+      <div class="pv-popup__error" id="pvPopupError" hidden>
+        Veuillez remplir les champs obligatoires.
+      </div>
+
+      <button type="submit" class="pv-popup__btn" id="pvPopupBtn">
+        <span class="pv-popup__btn-text">Envoyer ma demande</span>
+        <span class="pv-popup__btn-spinner" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40" stroke-dashoffset="20" /></svg>
+        </span>
+      </button>
+    </form>
+
+    <div class="pv-popup__success" id="pvPopupSuccess" hidden>
+      <div class="pv-popup__success-icon">✓</div>
+      <h3 class="pv-popup__success-title">Demande reçue!</h3>
+      <p class="pv-popup__success-text">On vous contacte sous 24h avec votre prix. Merci!</p>
+    </div>
+  </div>
+</div>
+
 
 <!-- ===================================== -->
 <!-- JS -->
