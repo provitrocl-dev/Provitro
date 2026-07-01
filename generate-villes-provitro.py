@@ -97,13 +97,13 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18231581611"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16916227020"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
 
-  gtag('config', 'AW-18231581611');
+  gtag('config', 'AW-16916227020');
 </script>
 
   <meta charset="UTF-8">
